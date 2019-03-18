@@ -12,7 +12,7 @@ class Jogador {
         
         this.pontos = 0;
         let ace = 0;
-        
+         
         for (let i = 0; i < this.mao.length; i++) {
             
             let val = this.mao[i].valor;
@@ -33,6 +33,5 @@ class Jogador {
             this.pontos -= 10;
             ace -= 1;
         }
-        console.log(deck);
     }
 }
