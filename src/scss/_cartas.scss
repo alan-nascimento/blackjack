@@ -1,0 +1,269 @@
+
+%carta {
+    height: 162px;
+    width: 107px;
+    border-radius: 10px;
+    margin: 5px 5px 10px 5px;
+}
+
+.carta_1_1 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) -10px -10px;
+}
+
+.carta_1_2 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 1403px -10px;
+}
+
+.carta_1_3 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 1287px -10px;
+}
+
+.carta_1_4 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 1170px -10px;
+}
+
+.carta_1_5 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 1052px -10px;
+}
+
+.carta_1_6 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 936px -10px;
+}
+
+.carta_1_7 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 819px -10px;
+}
+
+.carta_1_8 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 702px -10px;
+}
+
+.carta_1_9 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 584px -10px;
+}
+
+.carta_1_10 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 468px -10px;
+}
+
+.carta_1_11 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 350px -10px;
+}
+
+.carta_1_12 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 234px -10px;
+}
+
+.carta_1_13 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 117px -10px;
+}
+
+/* Copas */
+
+.carta_2_1 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) -10px -180px;
+}
+
+.carta_2_2 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 1403px -180px;
+}
+
+.carta_2_3 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 1287px -180px;
+}
+
+.carta_2_4 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 1170px -180px;
+}
+
+.carta_2_5 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 1052px -180px;
+}
+
+.carta_2_6 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 936px -180px;
+}
+
+.carta_2_7 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 819px -180px;
+}
+
+.carta_2_8 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 702px -180px;
+}
+
+.carta_2_9 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 584px -180px;
+}
+
+.carta_2_10 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 468px -180px;
+}
+
+.carta_2_11 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 350px -180px;
+}
+
+.carta_2_12 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 234px -180px;
+}
+
+.carta_2_13 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 117px -180px;
+}
+
+.carta_3_1 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) -10px -351px;
+}
+
+.carta_3_2 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 1403px -351px;
+}
+
+.carta_3_3 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 1287px -351px;
+}
+
+.carta_3_4 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 1170px -351px;
+}
+
+.carta_3_5 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 1052px -351px;
+}
+
+.carta_3_6 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 936px -351px;
+}
+
+.carta_3_7 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 819px -351px;
+}
+
+.carta_3_8 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 702px -351px;
+}
+
+.carta_3_9 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 584px -351px;
+}
+
+.carta_3_10 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 468px -351px;
+}
+
+.carta_3_11 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 350px -351px;
+}
+
+.carta_3_12 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 234px -351px;
+}
+
+.carta_3_13 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 117px -351px;
+}
+
+.carta_4_1 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) -10px -522px;
+}
+
+.carta_4_2 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 1403px -522px;
+}
+
+.carta_4_3 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 1287px -522px;
+}
+
+.carta_4_4 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 1170px -522px;
+}
+
+.carta_4_5 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 1052px -522px;
+}
+
+.carta_4_6 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 936px -522px;
+}
+
+.carta_4_7 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 819px -522px;
+}
+
+.carta_4_8 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 702px -522px;
+}
+
+.carta_4_9 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 584px -522px;
+}
+
+.carta_4_10 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 468px -522px;
+}
+
+.carta_4_11 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 350px -522px;
+}
+
+.carta_4_12 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 234px -522px;
+}
+
+.carta_4_13 {
+    @extend %carta;
+    background: url(../img/cards_deck.png) 117px -522px;
+}

@@ -33,5 +33,6 @@ class Jogador {
             this.pontos -= 10;
             ace -= 1;
         }
+        console.log(deck);
     }
 }
