@@ -1,0 +1,116 @@
+
+@font-face {
+    font-family: 'Lilita One';
+    src: url('../fonts/LilitaOne-Regular.ttf') format('truetype');
+}
+
+$cor-base: #170F14;
+$cor-mesa: radial-gradient(#005b37, #012917);
+$cor-botoes: #009038;
+$cor-texto: #f5f5f5;
+
+$fonte-base: 'Lilita One', cursive;
+
+body {
+    font-family: $fonte-base;
+    background-color: $cor-base;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: $cor-texto;
+    text-align: center;
+    text-transform: uppercase;  
+}
+
+.jogo {
+    background-image: $cor-mesa;
+    max-width: 1000px;
+    min-height: 550px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.65);
+    text-align:center;
+    margin: 0 auto;
+}
+
+.fa-question-circle {
+    color: $cor-botoes;
+    font-size: 1.25rem;
+}
+
+.deck {
+    background-color: $cor-botoes;
+    font-size: 14px;
+    color: $cor-texto;
+    padding: 10px 6px 10px 6px;
+    border-radius:3px;
+    border: solid 2px $cor-botoes;
+}
+
+.btn {
+    background: $cor-botoes;
+    color: $cor-texto;
+    min-width: 150px; 
+    min-height: 40px;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background-color: $cor-base;
+    color: $cor-texto;
+}
+
+.jogadores {
+    font-size: 1.75rem;
+    min-width: 950px;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.jogador {
+    width: 40%;
+    padding: 10px;
+    display: inline-block;
+    margin: 20px;
+    vertical-align: top;
+    background: $cor-texto;
+}
+
+.pontos {
+    font-size: 1.25rem;
+    margin-top: 20px;
+}
+
+/* Popup */
+
+#resultado-popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.7);
+    visibility: hidden;
+    opacity: 0;
+
+    .popup {
+        background: $cor-texto;
+        margin: 20px;
+        padding: 40px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .resumo {
+        margin: 40px 0;
+        font-size: 1.25rem;
+    }
+}
+

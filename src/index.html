@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Black Jack Game</title>
+    
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/icons/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+</head>
+<body>
+    
+    <h1 class="mt-3">Black Jack</h1>
+    
+    <div class="jogo py-3 px-3 mb-4">
+        
+        <div class="d-flex flex-row justify-content-between">
+            <i id="info" class="far fa-question-circle ml-5 mt-4"></i>
+            <div id="contador-deck" class="deck mr-5 mt-3">52</div>
+        </div>
+        
+        <div>
+            <button id="iniciar" class="btn mx-2"><i class="fas fa-play-circle pr-2"></i>Iniciar</button>
+            <button id="reiniciar" class="btn mx-2"><i class="fas fa-redo-alt pr-2"></i>Reiniciar</button>
+            <button id="puxar-carta" class="btn mx-2"><i class="fas fa-plus-circle pr-2"></i>Puxar Carta</button>
+            <button id="aguardar" class="btn mx-2"><i class="far fa-hand-paper pr-2"></i>Aguardar</button> 
+        </div>
+        
+        <div class="jogadores">
+
+            <div id="jogador" class="jogador">
+                <div>Jogador</div>
+                <div class="mx-auto">
+                    <img id="copas">
+                    <img id="copas">
+                    <img id="copas">
+                    <img id="copas">
+                    <img id="copas">
+                </div>
+                <div class="pontos" id="pontos-jogador"><span>Pontuação: </span>21</div>
+            </div>
+
+            <div id="maquina" class="jogador">
+                <div>Máquina</div>
+                <div class="mx-auto">
+                    <img id="copas">
+                    <img id="copas">
+                    <img id="copas">
+                    <img id="copas">
+                    <img id="ace">
+                </div>
+                <div class="pontos" id="pontos-maquina"><span>Pontuação: </span>21</div>
+            </div>
+            
+        </div>
+        
+        <div id="resultado-popup">
+            <div class="popup">
+                <h2>Parabéns! Você Ganhou!</h2>
+                <div class="resumo">
+                    <div>Jogador: <span id="pontos-jogador"></span> 21</div>
+                    <div>Máquina: <span id="pontos-maquina"></span> 21</div>
+                </div>
+                <button class="btn mx-2"><i class="fas fa-redo-alt pr-2"></i>Jogar Novamente</button>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="js/Carta.js"></script>
+    <script src="js/Deck.js"></script>
+    <script src="js/Jogador.js"></script>
+    <script src="js/Maquina.js"></script>
+    <script src="js/Blackjack.js"></script>
+    <script src="js/app.js"></script>
+    
+</body>
+</html>
+
