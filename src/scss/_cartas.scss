@@ -6,6 +6,11 @@
     margin: 5px 5px 10px 5px;
 }
 
+.carta_sombra {
+    @extend %carta;
+    background: rgba(0, 0, 0, 0.7);
+}
+
 .carta_1_1 {
     @extend %carta;
     background: url(../img/cards_deck.png) -10px -10px;

@@ -6,6 +6,12 @@
 
 @import "variaveis.scss";
 @import "cartas.scss";
+@import "resultado.scss";
+
+html {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 
 body {
     font-family: $fonte-base;
@@ -67,6 +73,7 @@ h1 {
 }
 
 .jogador {
+    min-height: 290px;
     width: 40%;
     padding: 10px;
     display: inline-block;
@@ -80,34 +87,7 @@ h1 {
     margin-top: 20px;
 }
 
-/* Popup */
-
-#resultado-popup {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0,0,0,0.7);
-    visibility: hidden;
-    opacity: 0;
-
-    .popup {
-        background: $cor-texto;
-        margin: 20px;
-        padding: 40px;
-        border-radius: 10px;
-        text-align: center;
-    }
-
-    .resumo {
-        margin: 40px 0;
-        font-size: 1.25rem;
-    }
+.display-none {
+    display: none;
 }
-
 

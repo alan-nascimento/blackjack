@@ -29,38 +29,40 @@
             <button id="iniciar" class="btn mx-2"><i class="fas fa-play-circle pr-2"></i>Iniciar</button>
             <button id="reiniciar" class="btn mx-2 display-none"><i class="fas fa-redo-alt pr-2"></i>Reiniciar</button>
             <button id="puxar-carta" class="btn mx-2"><i class="fas fa-plus-circle pr-2"></i>Puxar Carta</button>
-            <button id="aguardar" class="btn mx-2"><i class="far fa-hand-paper pr-2"></i>Aguardar</button> 
+            <button id="aguardar" class="btn mx-2"><i class="far fa-hand-paper pr-2"></i>Parar</button> 
         </div>
         
         <div class="jogadores">
 
-            <div id="jogador" class="jogador">
+            <div class="jogador">
                 <div>Jogador</div>
-                <div class="mx-auto">
-                    <img class="carta_1_1">
-    
+                <div id="jogador" class="mx-auto">
+                    <img class="carta_sombra">
+                    <img class="carta_sombra">
                 </div>
-                <div class="pontos"><span>Pontuação: </span id="pontos-jogador">21</div>
+                <div class="pontos">Pontuação: <span class="pontos-jogador"></span></div>
             </div>
 
-            <div id="maquina" class="jogador">
+            <div class="jogador">
                 <div>Máquina</div>
-                <div class="mx-auto">
-                    
+                <div id="maquina" class="mx-auto">
+                    <img class="carta_sombra">
+                    <img class="carta_sombra">
                 </div>
-                <div class="pontos" id="pontos-maquina"><span>Pontuação: </span>21</div>
+                <div class="pontos">Pontuação: <span class="pontos-maquina"></span></div>
             </div>
             
         </div>
         
         <div id="resultado-popup">
             <div class="popup">
-                <h2>Parabéns! Você Ganhou!</h2>
+                <h2 id="resultado">Parabéns!<br>Você Ganhou!</h2>
                 <div class="resumo">
-                    <div>Jogador: <span id="pontos-jogador"></span> 21</div>
-                    <div>Máquina: <span id="pontos-maquina"></span> 21</div>
+                    <div>Jogador: <span class="pontos-jogador"></span></div>
+                    <div>Máquina: <span class="pontos-maquina"></span></div>
                 </div>
-                <button class="btn mx-2"><i class="fas fa-redo-alt pr-2"></i>Jogar Novamente</button>
+                <button id="ver-jogo" class="btn mx-2"><i class="fas fa-eye pr-2"></i>Ver jogo</button>
+                <button id="jogar-novamente" class="btn mx-2"><i class="fas fa-redo-alt pr-2"></i>Jogar Novamente</button>
             </div>
         </div>
 
