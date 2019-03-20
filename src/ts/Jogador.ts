@@ -1,12 +1,15 @@
 class Jogador {
     
+    private mao: Carta[];
+    private pontos: number;
+    
     constructor() {
         
         this.mao = [];
         this.pontos = 0;
     }
     
-    pegaCarta(deck) {
+    pegaCarta(deck: { puxarCarta: () => Carta; }) {
         
         this.mao.push(deck.puxarCarta());
         
@@ -15,7 +18,7 @@ class Jogador {
          
         for (let i = 0; i < this.mao.length; i++) {
             
-            let val = this.mao[i].valor;
+            let val = this.mao[i].Valor;
             
             if (val > 10) {
                 val = 10;
@@ -33,5 +36,13 @@ class Jogador {
             this.pontos -= 10;
             ace -= 1;
         }
+    }
+
+    get Mao() {
+        return this.mao;
+    }
+
+    get Pontos() {
+        return this.pontos;
     }
 }

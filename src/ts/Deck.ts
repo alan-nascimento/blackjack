@@ -1,4 +1,6 @@
 class Deck {
+    
+    private deck: Carta[];
 
     constructor() {
 
@@ -18,5 +20,9 @@ class Deck {
     puxarCarta() {
         
         return this.deck.splice(Math.floor(Math.random() * this.deck.length), 1)[0];
+    }
+
+    get Deck() {
+        return this.deck;
     }
 }

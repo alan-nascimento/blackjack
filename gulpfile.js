@@ -3,6 +3,8 @@ const del = require('del');
 const connect = require('gulp-connect');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const ts = require('gulp-typescript');
 
 const target = 'dist/blackjack';
 
@@ -19,7 +21,10 @@ function index() {
 
 function js() {
     
-    return src('src/js/**/*')
+    var tsconfig = require('tsconfig.json');
+    
+    return src('src/ts/**/*')
+    .pipe(ts(tsconfig.compilerOptions))
     .pipe(dest(target + '/js'))
     .pipe(connect.reload());
 }
@@ -71,7 +76,7 @@ function icons() {
     return src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
     .pipe(dest(target + '/css/icons/webfonts'))
     .pipe(connect.reload());
-};
+}
 
 function server(cb) {
     connect.server({
@@ -105,5 +110,4 @@ const build = series(
         
         exports.default = build;
         exports.start = start;
-        
         

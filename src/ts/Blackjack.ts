@@ -1,10 +1,7 @@
 class Blackjack {
     
-    constructor() {
+    constructor(private deck: Deck, private jogador: Jogador, private maquina: Maquina) {
         
-        this.deck = null;
-        this.jogador = null;
-        this.maquina = null;
     }
     
     iniciarJogo() {
@@ -21,6 +18,19 @@ class Blackjack {
 
     finalizarJogo() {
         
-        this.maquina.jogar(this.jogador.pontos, this.deck);
+        this.maquina.jogar(this.jogador.Pontos, this.deck);
     }
-}
+
+    get Deck() {
+        return this.deck;
+    }
+
+    get Jogador() {
+        return this.jogador;
+    }
+
+    get Maquina() {
+        return this.maquina;
+    }
+};
+

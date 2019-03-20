@@ -1,0 +1,20 @@
+{
+
+    "files": [
+        "src/ts/Carta.ts", 
+        "src/ts/Deck.ts",
+        "src/ts/Jogador.ts",
+        "src/ts/Maquina.ts", 
+        "src/ts/Blackjack.ts", 
+        "src/ts/app.ts"
+    ],
+    "compilerOptions": {
+        "target": "es6",
+        "outDir": "src/js",
+        "noEmitOnError": true, 
+        "noImplicitAny": true    
+    },
+    "include": [
+        "src/ts/**/*"
+    ]
+}

@@ -1,13 +1,13 @@
 
 class Maquina extends Jogador {
 
-    jogar(pontosJogador, deck) {
+    jogar(pontosJogador: number, deck: { puxarCarta: () => Carta; }) {
         
         while (pontosJogador < 21) {
             
             this.pegaCarta(deck);
 
-            if (this.pontos > pontosJogador) {
+            if (this.Pontos > pontosJogador) {
                 
                 break;
             }
