@@ -1,10 +1,10 @@
-const { src, dest, watch, series, parallel } = require('gulp');
-const del = require('del');
-const connect = require('gulp-connect');
-const sass = require('gulp-sass');
-const concat = require('gulp-concat');
-const uglify = require('gulp-uglify');
-const ts = require('gulp-typescript');
+import { src, dest, watch, series, parallel } from 'gulp';
+import del from 'del';
+import { reload, server as _server } from 'gulp-connect';
+import sass, { logError } from 'gulp-sass';
+import concat from 'gulp-concat';
+import uglify from 'gulp-uglify';
+import ts from 'gulp-typescript';
 
 const target = 'dist/blackjack';
 
@@ -17,7 +17,7 @@ function index() {
     
     return src('src/index.html')
     .pipe(dest(target))
-    .pipe(connect.reload());
+    .pipe(reload());
 }
 
 function js() {
@@ -32,16 +32,16 @@ function js() {
     .pipe(concat('app.js'))
     .pipe(uglify())
     .pipe(dest(target + '/js'))
-    .pipe(connect.reload());
+    .pipe(reload());
 }
 
 function css() {
     
     return src('src/scss/**/*')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass().on('error', logError))
     .pipe(concat('style.css'))
     .pipe(dest(target + '/css'))
-    .pipe(connect.reload());
+    .pipe(reload());
 }
 
 function jquery() {
@@ -60,32 +60,32 @@ function img() {
     
     return src('src/img/**/*')
     .pipe(dest(target + '/img'))
-    .pipe(connect.reload());
+    .pipe(reload());
 }
 
 function fonts() {
 
     return src('src/fonts/**/*')
     .pipe(dest(target + '/fonts'))
-    .pipe(connect.reload());
+    .pipe(reload());
 }
 
 function cssIcons() {
 
     return src('node_modules/@fortawesome/fontawesome-free/css/all.min.css')
     .pipe(dest(target + '/css/icons/css'))
-    .pipe(connect.reload());
+    .pipe(reload());
 }
 
 function icons() {
 
     return src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
     .pipe(dest(target + '/css/icons/webfonts'))
-    .pipe(connect.reload());
+    .pipe(reload());
 }
 
 function server(cb) {
-    connect.server({
+    _server({
         root: 'dist',
         port: 3000,
         livereload: true
@@ -114,6 +114,8 @@ const build = series(
         parallel(server, watchers)
         );
         
-        exports.default = build;
-        exports.start = start;
+        const _default = build;
+export { _default as default };
+        const _start = start;
+export { _start as start };
         
