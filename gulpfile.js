@@ -9,6 +9,7 @@ const ts = require('gulp-typescript');
 const target = 'dist/blackjack';
 
 function clean() {
+    
     return del(['dist']);
 }
 
@@ -20,11 +21,16 @@ function index() {
 }
 
 function js() {
-    
-    var tsconfig = require('tsconfig.json');
-    
+
     return src('src/ts/**/*')
-    .pipe(ts(tsconfig.compilerOptions))
+    .pipe(ts({
+        noImplicitAny: true,
+        noEmitOnError: true,
+        target: 'es5',
+        out: 'output.js'
+    }))
+    .pipe(concat('app.js'))
+    .pipe(uglify())
     .pipe(dest(target + '/js'))
     .pipe(connect.reload());
 }
@@ -88,7 +94,7 @@ function server(cb) {
 }
 
 function watchers(cb) {
-    watch('src/js/**/*', js);
+    watch('src/ts/**/*', js);
     watch('src/scss/**/*', css);
     watch('src', index);
     watch('src/img/**/*', img);

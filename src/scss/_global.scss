@@ -1,0 +1,16 @@
+html {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: $fonte-base;
+    background-color: $cor-base;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: $cor-texto;
+    text-align: center;
+    text-transform: uppercase;  
+}

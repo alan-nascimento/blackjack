@@ -1,7 +1,7 @@
 
 let blackJack = new Blackjack(new Deck, new Jogador, new Maquina);
 
-let $: any;
+var $: any;
 
 $('#resultado-popup').hide();
 
